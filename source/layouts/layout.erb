@@ -1,0 +1,42 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= [data.page.title, data.site.name].compact.join(' | ') %></title>
+    
+    <%= stylesheet_link_tag "app", "style" %>
+    <%= javascript_include_tag "modernizr" %>
+  </head>
+  
+  <body class="<%= page_classes %>">
+    <nav class="top-bar" data-topbar role="navigation">
+      <ul class="title-area">
+        <li class="name">
+          <h1><%= link_to data.site.name, "/" %></a></h1>
+        </li>
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+      </ul>
+
+      <section class="top-bar-section">
+        <ul class="left">
+          <li><%= link_to "Call for paper", "submit.html" %></li>
+          <li><%= link_to "Program", "program.html" %></li>
+          <li><%= link_to "Registration", "register.html" %></li>
+          <li><%= link_to "Access", "access.html" %></li>
+          <li><%= link_to "Contact", "contact.html" %></li>
+        </ul>
+      </section>
+    </nav>
+
+    <div class="row">
+      <div class="large-12 columns">
+        <h1><%= data.page.title %></h1>
+      </div>
+    </div>
+
+    <%= yield %>
+
+    <%= javascript_include_tag  "all" %>
+  </body>
+</html>
