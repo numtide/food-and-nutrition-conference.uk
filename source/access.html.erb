@@ -1,18 +1,30 @@
 ---
-title: "Access to the venue"
+title: "All you need to know for your visit"
 ---
+<% content_for :page_styles do %>
+  <%= stylesheet_link_tag "foundation-icons" %>
+<% end %>
 
 <div class="row">
   <div class="large-6 columns">
     <div class="panel">
-      <h3>We&rsquo;re stoked you want to come</h3>
-      <pre>
-University of Sussex
-Sussex House
-Brighton
-BN1 9RH
-United Kingdom
-      </pre>
+      <h3>Address</h3>
+      <ul class="vcard">
+        <li class="fn">University of Sussex</li>
+        <li class="street-address">Sussex House</li>
+        <li class="locality">Brighton</li>
+        <li><span class="state">West-Sussex</span>, <span class="zip">BN1 9RH</span></li>
+        <li class="email"><a href="#">g.baltar@example.com<script cf-hash="f9e31" type="text/javascript">
+/* <![CDATA[ */!function(){try{var t="currentScript"in document?document.currentScript:function(){for(var t=document.getElementsByTagName("script"),e=t.length;e--;)if(t[e].getAttribute("cf-hash"))return t[e]}();if(t&&t.previousSibling){var e,r,n,i,c=t.previousSibling,a=c.getAttribute("data-cfemail");if(a){for(e="",r=parseInt(a.substr(0,2),16),n=2;a.length-n;n+=2)i=parseInt(a.substr(n,2),16)^r,e+=String.fromCharCode(i);e=document.createTextNode(e),c.parentNode.replaceChild(e,c)}}}catch(u){}}();/* ]]> */</script></a></li>
+      </ul>
+      <h3>Conference room</h3>
+      <p>36b - near the cafeteria<p>
+    </div>
+    <div class="panel hide-for-print">
+      <a href="javascript:window.print()" class="small radius button">
+        <i class="step fi-print size-24"></i>
+        Print this page
+      </a>
     </div>
   </div>
   <div class="large-6 columns">
@@ -22,6 +34,27 @@ United Kingdom
 
 <div class="row">
   <div class="large-12 columns">
-    <h3>Transportation</h3>
+    <div class="panel">
+      <h3>Transportation</h3>
+      <p>How to reach the conference</p>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="large-12 columns">
+    <div class="panel">
+      <h3>Places to stay</h3>
+      <p>Where to stay during the visit<p>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="large-12 columns">
+    <div class="panel">
+      <h3>Places to visit</h3>
+      <p>Interesting places to visit<p>
+    </div>
   </div>
 </div>

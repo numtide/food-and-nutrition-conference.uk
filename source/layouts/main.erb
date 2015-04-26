@@ -4,11 +4,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= [data.page.title, data.site.name].compact.join(' | ') %></title>
-    
+
     <%= stylesheet_link_tag "style" %>
+    <%= yield_content :page_styles %>
     <%= javascript_include_tag "modernizr" %>
   </head>
-  
   <body class="<%= page_classes %>">
     <%= yield %>
 

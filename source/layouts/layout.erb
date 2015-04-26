@@ -9,11 +9,12 @@
 
     <section class="top-bar-section">
       <ul class="left">
-        <li><%= link_to "Call for paper", "submit.html" %></li>
-        <li><%= link_to "Program", "program.html" %></li>
-        <li><%= link_to "Registration", "register.html" %></li>
-        <li><%= link_to "Access", "access.html" %></li>
-        <li><%= link_to "Contact", "contact.html" %></li>
+        <li class="submit"><%= link_to "Call for paper", "submit.html" %></li>
+        <li class="program"><%= link_to "Program", "program.html" %></li>
+        <li clsss="register"><%= link_to "Registration", "register.html" %></li>
+        <li class="access"><%= link_to "Access", "access.html" %></li>
+        <li class="contact"><%= link_to "Contact", "contact.html" %></li>
+        <li class="about"><%= link_to "About", "about.html" %></li>
       </ul>
     </section>
   </nav>
@@ -21,8 +22,18 @@
   <div class="row">
     <div class="large-12 columns">
       <h1><%= data.page.title %></h1>
+      <% if data.page.subtitle %>
+        <h2 class="subheader"><%= data.page.subtitle %></h2>
+      <% end %>
     </div>
+
   </div>
 
   <%= yield %>
+
+  <div class="row footer">
+    <div class="large-12 columns">
+      <p>(c) 2016 - Sussex University<p>
+    </div>
+  </div>
 <% end %>

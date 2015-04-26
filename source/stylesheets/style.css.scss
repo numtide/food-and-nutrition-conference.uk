@@ -2,7 +2,7 @@
 @import "foundation.scss";
 
 body {
-  background-color: #e2e3e5;
+  background-color: #e1d0c6;
 }
 
 header {
@@ -37,4 +37,50 @@ iframe.map {
   border: 1px solid #ddd;
   width: 100%;
   height: 400px;
+}
+
+.top-bar-section li:not(.has-form) a:not(.button) {
+  background: inherit;
+}
+
+body.submit {
+  background-color: #8e914c;
+}
+.top-bar-section li.submit {
+  background-color: #414e34;
+}
+
+body.program {
+  background-color: #e08238;
+}
+.top-bar-section li.program {
+  background-color: #894823;
+}
+
+body.register {
+  background-color: #8ca2b9;
+}
+.top-bar-section li.register {
+  background-color: #3c435f;
+}
+
+body.access {
+  background-color: #904d32;
+}
+.top-bar-section li.access {
+  background-color: #281710;
+}
+
+body.contact {
+  background-color: #eac539;
+}
+.top-bar-section li.contact {
+  background-color: #cd951c;
+}
+
+body.about {
+  background-color: #d46973;
+}
+.top-bar-section li.about {
+  background-color: #c93f1a;
 }

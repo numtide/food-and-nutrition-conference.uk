@@ -7,6 +7,7 @@ BOWER_DIR = JSON.parse(IO.read("#{root}/.bowerrc"))["directory"]
 compass_config do |config|
   # Require any additional compass plugins here.
   config.add_import_path File.join(root, BOWER_DIR, "foundation/scss")
+  config.add_import_path File.join(root, BOWER_DIR, "foundation-icon-fonts")
 
   # Set this to the root of your project when deployed:
   config.http_path = "/"
