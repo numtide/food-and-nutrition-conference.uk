@@ -86,6 +86,9 @@ after_configuration do
   sprockets.append_path File.join(root, BOWER_DIR)
 end
 
+# Faster file watch when using direnv
+config[:file_watcher_ignore] << /^\.direnv/
+
 set :css_dir, 'stylesheets'
 
 set :js_dir, 'javascripts'
