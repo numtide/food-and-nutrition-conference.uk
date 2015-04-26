@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg4208"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   width="1024"
+   height="1293"
+   viewBox="0 0 1024 1293"
+   sodipodi:docname="menu.svg">
+  <metadata
+     id="metadata4214">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs4212" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1280"
+     inkscape:window-height="751"
+     id="namedview4210"
+     showgrid="false"
+     inkscape:zoom="2.0649924"
+     inkscape:cx="619.56522"
+     inkscape:cy="1063.1728"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4208" />
+  <image
+     sodipodi:absref="/Users/zimbatm/code/zimbatm/food-and-nutrition-2016/source/images/menu.jpg"
+     xlink:href="menu.jpg"
+     width="1024"
+     height="1293"
+     preserveAspectRatio="none"
+     id="image4216"
+     x="0"
+     y="0" />
+  <text
+     xml:space="preserve"
+     class="section"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#e5dbd2;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;-inkscape-font-specification:'Sans, Normal';font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;"
+     id="text4225"
+     sodipodi:linespacing="125%"><textPath
+       xlink:href="#path4239"
+       id="textPath4241">ACCESS</textPath></text>
+  <text
+     xml:space="preserve"
+     class="section"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#282329;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;-inkscape-font-specification:'Sans, Normal';font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;"
+     id="text4229"
+     sodipodi:linespacing="125%"><textPath
+       xlink:href="#path4984"
+       id="textPath4986"><tspan
+   id="tspan4979"
+   style="fill:#282329;fill-opacity:1;">PROGRAM</tspan></textPath></text>
+  <text
+     xml:space="preserve"
+     class="section"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#e5dbd2;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+     id="text4233"
+     sodipodi:linespacing="125%"><textPath
+       xlink:href="#path4229"
+       id="textPath4231"><tspan
+   id="tspan4971">CALL FOR PAPER</tspan></textPath></text>
+  <text
+     xml:space="preserve"
+     class="section"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#e5dbd2;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     id="text4237"
+     sodipodi:linespacing="125%"><textPath
+       xlink:href="#path4234"
+       id="textPath4236"><tspan
+   id="tspan4973">REGISTER</tspan></textPath></text>
+  <text
+     xml:space="preserve"
+     class="section"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#e5dbd2;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     id="text4241"
+     sodipodi:linespacing="125%"><textPath
+       xlink:href="#path4265"
+       id="textPath4267"><tspan
+   id="tspan4977">CONTACT</tspan></textPath></text>
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.894;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+     d="M 132.9513,537.8876 C 159.53204,451.58365 258.78582,371.36273 258.78582,371.36273"
+     id="path4984"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     id="text4219"
+     sodipodi:linespacing="125%"><textPath
+       xlink:href="#path4243"
+       id="textPath4245"><tspan
+   id="tspan4221">PARTNERS</tspan></textPath></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     id="text4223"
+     sodipodi:linespacing="125%"><textPath
+       xlink:href="#path4272"
+       id="textPath4274"><tspan
+   id="tspan4225">ABOUT</tspan></textPath></text>
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 346.73251,321.08359 c 187.89416,-74.57654 327.36198,4.84263 327.36198,4.84263"
+     id="path4229"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="M 751.57662,368.54139 C 837.77549,434.4012 881.35918,525.4427 881.35918,525.4427"
+     id="path4234"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 916.71039,674.11152 c 1.93706,114.7704 -32.9299,181.59874 -32.9299,181.59874"
+     id="path4239"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 592.73826,1118.6652 c 136.56224,-23.2446 201.45352,-98.7897 201.45352,-98.7897"
+     id="path4243"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="M 143.04817,865.4668 C 91.495936,773.17799 103.06499,675.14053 103.06499,675.14053"
+     id="path4265"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 246.49001,1038.7618 c 84.74608,67.3126 144.79473,68.7653 144.79473,68.7653"
+     id="path4272"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc" />
+</svg>
