@@ -42,44 +42,66 @@ iframe.map {
   background: inherit;
 }
 
+$green-dark: #8e914c;
+$green-light: #414e34;
+
+$orange-dark: #894823;
+$orange-light: #e08238;
+
+$blue-dark: #8ca2b9;
+$blue-light: #3c435f;
+
+$white-dark: #ddd;
+$white-light: #fff;
+
+$red-dark: #d46973;
+$red-light: #c93f1a;
+
+$brown-dark: #904d32;
+$brown-light: #281710;
+
+$yellow-dark: #eac539;
+$yellow-light: #cd951c;
+
 body.submit {
-  background-color: #8e914c;
+  background-color: $yellow-dark;
 }
 .top-bar-section li.submit {
-  background-color: #414e34;
-}
-
-body.program {
-  background-color: #e08238;
-}
-.top-bar-section li.program {
-  background-color: #894823;
+  background-color: $yellow-light;
 }
 
 body.register {
-  background-color: #8ca2b9;
+  background-color: $green-dark;
 }
 .top-bar-section li.register {
-  background-color: #3c435f;
+  background-color: $green-light;
 }
 
+body.program {
+  background-color: $orange-dark;
+}
+.top-bar-section li.program {
+  background-color: $orange-light;
+}
+
+
 body.access {
-  background-color: #904d32;
+  background-color: $brown-dark;
 }
 .top-bar-section li.access {
-  background-color: #281710;
+  background-color: $brown-light;
 }
 
 body.contact {
-  background-color: #eac539;
+  background-color: $blue-dark;
 }
 .top-bar-section li.contact {
-  background-color: #cd951c;
+  background-color: $blue-light;
 }
 
 body.about {
-  background-color: #d46973;
+  background-color: $red-dark;
 }
 .top-bar-section li.about {
-  background-color: #c93f1a;
+  background-color: $red-light;
 }
