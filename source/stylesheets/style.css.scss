@@ -45,7 +45,12 @@ $yellow-dark: #CF910A;
 }
 
 body.index {
-  background-color: $white-light;
+  background-color: #443F3F;
+  color: #fff;
+
+  h1, h2, h3 {
+    color: inherit;
+  }
 }
 
 body.submit {
