@@ -4,37 +4,53 @@ title: "Registration"
 
 <div class="row">
   <div class="large-12 columns">
+    <div class="panel">
+      <h1>Opening September 2015</h1>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="large-12 columns">
     <form class="panel">
       <div class="row">
         <div class="large-3 columns">
-          <label for="first_name">First name</label>
-          <input name="first_name" type="text" placeholder="" />
+          <label for="first_name">Firsts name</label>
+          <input id="first_name" name="first_name" type="text" placeholder="">
         </div>
         <div class="large-3 columns">
           <label for="surname">Surname</label>
-          <input name="surname" type="text" placeholder="" />
+          <input id="surname" name="surname" type="text" placeholder="">
         </div>
         <div class="large-3 columns">
           <label for="email">Email</label>
-          <input name="email" type="email" placeholder="@" />
+          <input id="email" name="email" type="email" placeholder="@">
         </div>
         <div class="large-3 columns">
-          <label>Affiliated University</label>
-          <input type="text" placeholder="" />
+          <label for="university">Affiliated University</label>
+          <input id="university" name="university" type="text">
         </div>
       </div>
       <div class="row">
-        <div class="large-6 columns">
-          <legend>Are you presenting a paper ?</legend>
-          <select name="presenting">
-            <option>Yes</option>
+        <div class="large-4 columns">
+          <label for="dinner">
+            Are you participating to dinner ?
+          </label>
+          <select id="dinner" name="dinner">
+            <option>Yes - I am a speaker - Free</option>
+            <option>Yes - I am a non-speaker - 20.- GBP</option>
             <option>No</option>
           </select>
         </div>
-        <div class="large-6 columns">
-          <br>
-          <input name="dinner" type="checkbox">
-          <label for="dinner">Check if partitipating to the dinner ?</label>
+
+        <div class="large-4 columns"></div>
+
+        <div class="large-4 columns"></div>
+
+      </div>
+      <div class="row">
+        <div class="large-4 columns">
+          <h4>Total: 0 GBP</h4>
         </div>
       </div>
       <div class="row">
