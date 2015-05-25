@@ -3,6 +3,8 @@
 
 body {
   background-color: #e1d0c6;
+  // Original: http://www.transparenttextures.com/patterns/paper-3.png
+  background-image: url("/images/paper-3.png");
 }
 
 iframe.map {
@@ -35,6 +37,7 @@ $yellow-dark: #CF910A;
 // Override for menu background colors
 .top-bar-section li:not(.has-form) a:not(.button) {
   background: inherit;
+  background-image: inherit;
 }
 
 @media only screen and (min-width: 1074px) {
@@ -45,7 +48,9 @@ $yellow-dark: #CF910A;
 }
 
 body.index {
-  background-color: #443F3F;
+  background-color: #181818;
+  // Origin: http://www.transparenttextures.com/patterns/soft-wallpaper.png
+  background-image: url("/images/soft-wallpaper.png");
   color: #fff;
 
   h1, h2, h3 {
