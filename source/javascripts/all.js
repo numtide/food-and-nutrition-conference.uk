@@ -2,3 +2,4 @@
 //= require foundation/js/foundation
 
 //= require app
+//= require stickyFooter
