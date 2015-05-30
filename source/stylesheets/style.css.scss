@@ -40,9 +40,13 @@ $yellow-dark: #CF910A;
   background-image: inherit;
 }
 
+.top-bar {
+  margin-bottom: 1em;
+}
+
 @media only screen and (min-width: 1074px) {
   .top-bar-section > ul.left > li {
-    width: 109px;
+    width: 7em;
     text-align: center;
   }
 }
