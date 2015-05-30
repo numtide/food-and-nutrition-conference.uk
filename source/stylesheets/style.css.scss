@@ -32,7 +32,7 @@ $brown-light: #BD7B61;
 $brown-dark: #62260E;
 
 $yellow-light: #F8D983;
-$yellow-dark: #CF910A;
+$yellow-dark: #F8D955;
 
 // Override for menu background colors
 .top-bar-section li:not(.has-form) a:not(.button) {
@@ -48,7 +48,7 @@ $yellow-dark: #CF910A;
 }
 
 body.index {
-  background-color: #181818;
+  background-color: #000;
   // Origin: http://www.transparenttextures.com/patterns/soft-wallpaper.png
   background-image: url("/images/soft-wallpaper.png");
   color: #fff;

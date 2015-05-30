@@ -1,40 +1,45 @@
-<% wrap_layout :main do %>
-  <nav class="top-bar" data-topbar role="navigation">
-    <ul class="title-area">
-      <li class="name">
-        <h1><%= link_to data.site.name, "/" %></a></h1>
-      </li>
-      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-    </ul>
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= [data.page.title, data.site.name].compact.join(' | ') %></title>
 
-    <section class="top-bar-section">
-      <ul class="left">
-        <li class="submit"><%= link_to "Call for paper", "submit.html" %></li>
-        <li class="register"><%= link_to "Registration", "register.html" %></li>
-        <li class="program"><%= link_to "Program", "program.html" %></li>
-        <li class="access"><%= link_to "Access", "access.html" %></li>
-        <li class="about"><%= link_to "About", "about.html" %></li>
-        <li class="blank"><%= link_to "&nbsp;", "blank.html" %></li>
-        <li class="contact"><%= link_to "Contact", "contact.html" %></li>
+    <%= stylesheet_link_tag "style" %>
+    <%= yield_content :page_styles %>
+    <%= javascript_include_tag "modernizr" %>
+  </head>
+  <body class="<%= page_classes %>">
+
+    <nav class="top-bar" data-topbar role="navigation">
+      <ul class="title-area">
+        <li class="name">
+          <h1><%= link_to data.site.name, "/" %></a></h1>
+        </li>
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
       </ul>
-    </section>
-  </nav>
 
-  <div class="row">
-    <div class="large-12 columns">
-      <h1><%= data.page.title %></h1>
-      <% if data.page.subtitle %>
-        <h2 class="subheader"><%= data.page.subtitle %></h2>
-      <% end %>
+      <section class="top-bar-section">
+        <ul class="left">
+          <li class="submit"><%= link_to "Call for paper", "submit.html" %></li>
+          <li class="register"><%= link_to "Registration", "register.html" %></li>
+          <li class="program"><%= link_to "Program", "program.html" %></li>
+          <li class="access"><%= link_to "Access", "access.html" %></li>
+          <li class="about"><%= link_to "About", "about.html" %></li>
+          <li class="blank"><%= link_to "&nbsp;", "blank.html" %></li>
+          <li class="contact"><%= link_to "Contact", "contact.html" %></li>
+        </ul>
+      </section>
+    </nav>
+
+    <%= yield %>
+
+    <div class="row footer">
+      <div class="large-12 columns">
+        <p>(c) 2016 - Sussex University<p>
+      </div>
     </div>
 
-  </div>
-
-  <%= yield %>
-
-  <div class="row footer">
-    <div class="large-12 columns">
-      <p>(c) 2016 - Sussex University<p>
-    </div>
-  </div>
-<% end %>
+    <%= javascript_include_tag  "all" %>
+  </body>
+</html>
