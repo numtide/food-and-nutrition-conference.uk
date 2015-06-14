@@ -1,6 +1,18 @@
 ---
 title: "Registration"
 ---
+<% content_for :page_scripts do %>
+<script>
+jQuery(function($) {
+  function updateTotal() {
+    $("#total").text($('#dinner').val());
+  }
+
+  $("#dinner").change(updateTotal);
+  updateTotal();
+});
+</script>
+<% end %>
 
 <div class="row">
   <div class="large-12 columns">
@@ -14,33 +26,49 @@ title: "Registration"
   <div class="large-12 columns">
     <form class="panel">
       <div class="row">
-        <div class="large-3 columns">
-          <label for="first_name">Firsts name</label>
-          <input id="first_name" name="first_name" type="text" placeholder="">
-        </div>
-        <div class="large-3 columns">
-          <label for="surname">Surname</label>
-          <input id="surname" name="surname" type="text" placeholder="">
-        </div>
-        <div class="large-3 columns">
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" placeholder="@">
-        </div>
-        <div class="large-3 columns">
-          <label for="university">Affiliated University</label>
-          <input id="university" name="university" type="text">
-        </div>
-      </div>
-      <div class="row">
         <div class="large-4 columns">
-          <label for="dinner">
-            Are you participating to dinner ?
+          <label>
+            Academic title
+            <input name="academic_title" type="text" placeholder="" />
           </label>
-          <select id="dinner" name="dinner">
-            <option>Yes - speaker - Free</option>
-            <option>Yes - non-speaker - 20.- GBP</option>
-            <option>No</option>
-          </select>
+        </div>
+        <div class="large-4 columns">
+          <label>
+            Firsts name
+            <input name="first_name" type="text" placeholder="">
+          </label>
+        </div>
+        <div class="large-4 columns">
+          <label>
+            Surname
+            <input id="surname" name="surname" type="text" placeholder="">
+          </label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-4 columns">
+          <label>
+            Email
+            <input id="email" name="email" type="email" placeholder="@">
+          </label>
+        </div>
+        <div class="large-4 columns left">
+          <label>
+            Affiliated University
+            <input id="university" name="university" type="text">
+          </label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-4 columns">
+          <label>
+            Will you be joining us for the conference dinner?
+            <select id="dinner" name="dinner">
+              <option value="0.-">Yes - speaker - Free</option>
+              <option value="20.-">Yes - non-speaker - 20.- GBP</option>
+              <option value="0.-">No</option>
+            </select>
+          </label>
         </div>
 
         <div class="large-4 columns"></div>
@@ -50,7 +78,7 @@ title: "Registration"
       </div>
       <div class="row">
         <div class="large-4 columns">
-          <h4>Total: 0 GBP</h4>
+          <h4>Total: <span id="total">0</span> GBP</h4>
         </div>
       </div>
       <div class="row">
