@@ -4,17 +4,50 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+    <title><%= [yield(:title), site_name].compact.join(' | ') %></title>
 
     <%= stylesheet_link_tag    "application" %>
+    <%= yield(:page_styles) %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= yield(:page_scripts) %>
     <%= csrf_meta_tags %>
   </head>
 
   <body>
 
-    <%= yield %>
+    <nav class="top-bar" data-topbar role="navigation">
+      <ul class="title-area">
+        <li class="name">
+          <h1><%= link_to site_name, "/" %></h1>
+        </li>
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+      </ul>
+
+      <section class="top-bar-section">
+        <ul class="left">
+          <li class="submit"><%= link_to "Call for paper", "submit.html" %></li>
+          <li class="register"><%= link_to "Registration", "register.html" %></li>
+          <li class="program"><%= link_to "Program", "program.html" %></li>
+          <li class="abstracts"><%= link_to "Abstracts", "abstracts.html" %></li>
+          <li class="access"><%= link_to "Access", "access.html" %></li>
+          <li class="about"><%= link_to "About", "about.html" %></li>
+          <li class="contact"><%= link_to "Contact", "contact.html" %></li>
+        </ul>
+      </section>
+    </nav>
+
+    <main>
+      <%= yield %>
+    </main>
+
+    <footer>
+      <div class="row">
+        <div class="column large-12">
+          <p>(c) 2016 - Sussex University - Created by <a href="https://zimbatm.com" target="_blank">zimbatm</a></p>
+        </div>
+      </div>
+    </footer>
 
   </body>
 </html>
