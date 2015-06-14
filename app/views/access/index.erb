@@ -1,0 +1,52 @@
+<% content_for(:title) { "Access" } %>
+<% content_for :page_styles do %>
+  <%= stylesheet_link_tag "foundation-icons" %>
+<% end %>
+
+<div class="row" data-equalizer>
+  <div class="large-6 columns" data-equalizer-watch>
+    <div class="panel">
+      <h3>Address</h3>
+      <ul class="vcard">
+        <li class="fn">University of Sussex</li>
+        <li class="street-address">Sussex House</li>
+        <li class="locality">Brighton</li>
+        <li><span class="state">West-Sussex</span>, <span class="zip">BN1 9RH</span></li>
+      </ul>
+      <h3>Conference room</h3>
+      <p>Coming soon<p>
+      <p><a href="https://www.sussex.ac.uk/webteam/gateway/file.php?name=campusmap.pdf&site=271" target="_blank">Campus map [PDF 2.15MB]</a></p>
+
+    </div>
+    <div class="panel hide-for-print">
+      <a href="javascript:window.print()" class="small radius button">
+        <i class="step fi-print size-24"></i>
+        Print this page
+      </a>
+    </div>
+  </div>
+  <div class="large-6 columns" data-equalizer-watch id="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10072.239774124142!2d-0.087914!3d50.86709!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487588ca9b7c1b1b%3A0x7b4ba124cd6ad273!2sUniversity+of+Sussex!5e0!3m2!1sen!2suk!4v1428257145786" title="Map"></iframe>
+  </div>
+</div>
+
+<div class="row">
+  <div class="large-4 columns">
+    <div class="panel">
+      <h3>Transportation</h3>
+      <p><a href="http://www.sussex.ac.uk/aboutus/findus/uktravel" target="_blank">Click here</a><p>
+    </div>
+  </div>
+  <div class="large-4 columns">
+    <div class="panel">
+      <h3>Places to stay</h3>
+      <p><a href="http://www.sussex.ac.uk/aboutus/findus/wheretostay" target="_blank">Click here</a><p>
+    </div>
+  </div>
+  <div class="large-4 columns">
+    <div class="panel">
+      <h3>Places to visit</h3>
+      <p><a href="http://www.visitbrighton.com" target="_blank">Click here</a><p>
+    </div>
+  </div>
+</div>

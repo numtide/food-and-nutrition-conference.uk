@@ -9,8 +9,6 @@
     <%= stylesheet_link_tag    "application" %>
     <%= yield(:page_styles) %>
     <%= javascript_include_tag "vendor/modernizr" %>
-    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
-    <%= yield(:page_scripts) %>
     <%= csrf_meta_tags %>
   </head>
 
@@ -19,20 +17,20 @@
     <nav class="top-bar" data-topbar role="navigation">
       <ul class="title-area">
         <li class="name">
-          <h1><%= link_to site_name, "/" %></h1>
+          <h1><%= link_to site_name, home_path %></h1>
         </li>
         <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
       </ul>
 
       <section class="top-bar-section">
         <ul class="left">
-          <li class="submit"><%= link_to "Call for paper", "submit.html" %></li>
-          <li class="register"><%= link_to "Registration", "register.html" %></li>
-          <li class="program"><%= link_to "Program", "program.html" %></li>
-          <li class="abstracts"><%= link_to "Abstracts", "abstracts.html" %></li>
-          <li class="access"><%= link_to "Access", "access.html" %></li>
-          <li class="about"><%= link_to "About", "about.html" %></li>
-          <li class="contact"><%= link_to "Contact", "contact.html" %></li>
+          <li class="submit"><%= link_to "Call for paper", call_for_paper_path %></li>
+          <li class="register"><%= link_to "Registration", registration_path %></li>
+          <li class="programme"><%= link_to "Programme", programme_path %></li>
+          <li class="abstracts"><%= link_to "Abstracts", abstracts_path %></li>
+          <li class="access"><%= link_to "Access", access_path %></li>
+          <li class="about"><%= link_to "About", about_path %></li>
+          <li class="contact"><%= link_to "Contact", contact_path %></li>
         </ul>
       </section>
     </nav>
@@ -49,5 +47,7 @@
       </div>
     </footer>
 
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= yield(:page_scripts) %>
   </body>
 </html>
