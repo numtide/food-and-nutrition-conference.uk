@@ -96,18 +96,11 @@ body.access {
   background-color: $brown-dark;
 }
 
-body.contact {
+body.abstracts {
   background-color: $blue-light;
 }
-.top-bar-section li.contact {
+.top-bar-section li.abstracts {
   background-color: $blue-dark;
-}
-
-body.blank {
-  background-color: $white-light;
-}
-.top-bar-section li.blank {
-  background-color: $white-dark;
 }
 
 body.about {
@@ -115,4 +108,11 @@ body.about {
 }
 .top-bar-section li.about {
   background-color: $red-dark;
+}
+
+body.contact {
+  background-color: $white-light;
+}
+.top-bar-section li.contact {
+  background-color: $white-dark;
 }
