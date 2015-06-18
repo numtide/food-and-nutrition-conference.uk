@@ -38,7 +38,7 @@ $yellow-dark: #CF910A;
 body {
   background-color: #e1d0c6;
   // Original: http://www.transparenttextures.com/patterns/paper-3.png
-  background-image: url("paper-3.png");
+  background-image: asset-url("paper-3.png");
 }
 
 // Override for menu background colors
@@ -61,7 +61,7 @@ body {
 body.home {
   background-color: #000;
   // Origin: http://www.transparenttextures.com/patterns/soft-wallpaper.png
-  background-image: url("soft-wallpaper.png");
+  background-image: asset-url("soft-wallpaper.png");
   color: #fff;
 
   h1, h2, h3 {
