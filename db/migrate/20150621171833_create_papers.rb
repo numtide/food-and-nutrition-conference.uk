@@ -6,6 +6,7 @@ class CreatePapers < ActiveRecord::Migration
       t.string :title, null: false
       t.binary :proposal, null: false
 
+      t.datetime :deleted_at
       t.timestamps null: false
     end
   end

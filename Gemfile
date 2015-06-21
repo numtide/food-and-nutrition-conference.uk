@@ -21,6 +21,9 @@ gem 'sqlite3', group: 'development'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# Soft deletes
+gem 'paranoia', '~> 2.0'
+
 ## Views ##
 
 # Use jquery as the JavaScript library

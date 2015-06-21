@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20150621171833) do
     t.string   "email",                 null: false
     t.string   "academic_title",        null: false
     t.string   "affiliated_university", null: false
+    t.datetime "deleted_at"
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
   end
@@ -30,6 +31,7 @@ ActiveRecord::Schema.define(version: 20150621171833) do
     t.integer  "contact_id"
     t.string   "title",      null: false
     t.binary   "proposal",   null: false
+    t.datetime "deleted_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

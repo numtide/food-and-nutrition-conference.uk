@@ -12,6 +12,7 @@
 
 class Paper < ActiveRecord::Base
   belongs_to :contact
+  acts_as_paranoid
 
   validates_presence_of(
     :contact,

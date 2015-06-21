@@ -15,6 +15,7 @@
 
 class Contact < ActiveRecord::Base
   include EmailValidation
+  acts_as_paranoid
 
   validates_presence_of(
     :title,

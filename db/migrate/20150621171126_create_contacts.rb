@@ -8,6 +8,7 @@ class CreateContacts < ActiveRecord::Migration
       t.string :academic_title, null: false
       t.string :affiliated_university, null: false
 
+      t.datetime :deleted_at
       t.timestamps null: false
     end
     add_index :contacts, :email, unique: true
