@@ -1,0 +1,47 @@
+<% content_for(:title) { "Call for paper" } %>
+
+<div class="row" data-equalizer>
+  <div class="large-6 columns">
+    <div class="panel" data-equalizer-watch>
+      <h2>Deadline: 28 August 2015</h2>
+
+      <p>
+      We invite abstracts for papers covering any topic related to food and
+      nutrition in Europe including, but not limited to, the following:
+      </p>
+
+      <ul>
+        <li>
+          The development of policy by humanitarian, governmental and intergovernmental organisations.
+        </li>
+
+        <li> The relationship between diet, nutrition and health.  </li>
+
+        <li>
+          Economic, anthropomorphic and statistical approaches to the analysis of
+  food consumption.
+        </li>
+
+        <li>
+          Household-level analysis of nutrition/food expenditure and living standards.
+        </li>
+
+        <li>
+          Transnational comparisons between European countries and/or studies
+          of change over time in one country or region.
+        </li>
+      </ul>
+
+      <p>
+This conference is open to early career and established academics in any
+relevant discipline. The conference will be organised on workshop principles
+in one venue.
+      </p>
+
+    </div>
+  </div>
+
+  <div class="large-6 columns">
+    <%= render partial: 'form', locals: { paper: @paper } %>
+  </div>
+</div>

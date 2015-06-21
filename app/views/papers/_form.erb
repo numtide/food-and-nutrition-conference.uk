@@ -1,0 +1,15 @@
+<%= form_for(paper, multipart: true, data: {'equalized-watch' => 1}, html: {class: 'panel'}) do |f| %>
+  <fieldset>
+    <legend>Contact</legend>
+    <%= f.fields_for :contact, paper.contact do |builder| %>
+      <%= render partial: 'contact', locals: { f: builder } %>
+    <% end %>
+  </fieldset>
+  <fieldset>
+    <legend>Paper</legend>
+    <%= f.input_div :title %>
+    <%= f.input_div :proposal, type: :file, label: 'Upload proposal' %>
+    <p>Decisions on the conference program will be made in September 2015.</p>
+  </fieldset>
+  <%= f.submit 'Submit paper', class: 'small radius button' %>
+<% end %>
