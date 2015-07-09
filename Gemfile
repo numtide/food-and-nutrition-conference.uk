@@ -35,7 +35,6 @@ gem 'turbolinks'
 
 ## Email ##
 
-gem 'mailgun_rails'
 gem 'mailgun-ruby', require: 'mailgun'
 
 ## Web server ##

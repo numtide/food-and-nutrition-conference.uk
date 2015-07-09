@@ -1,32 +1,17 @@
 class CallForPaperController < ApplicationController
   def index
+    @paper = Paper.new
   end
 
   def post
-    required(:academic_title)
-    required(:first_name)
-    required(:last_name)
-    required(:email)
-    required(:affiliated_university)
-    required(:paper)
-
-    if @errors.present?
-      render :index
-    else
-      # TODO: send_email
+    @paper = Paper.new(params[:paper])
+    if @paper.valid?
+      CallForPaperMailer.data_email(@paper).deliver_now
+      CallForPaperMailer.thank_you_email(@paper).deliver_now
 
       render :thank_you
-    end
-  end
-
-  private
-
-  def required(name)
-    if params[name].to_s.empty?
-      @errors ||= {}
-      @errors[name] = "Entry is required"
     else
-      instance_variable_set("@#{name}", params[name])
+      render :index
     end
   end
 end

@@ -46,30 +46,30 @@ in one venue.
       <%= form_tag({action: 'post'}, multipart: true) do %>
         <div class="row">
           <div class="large-12 columns">
-            <%= input('academic_title', label: 'Academic title') %>
+            <%= input(@paper, 'academic_title', label: 'Academic title') %>
           </div>
         </div>
         <div class="row">
           <div class="large-6 columns">
-            <%= input('first_name', label: 'First name') %>
+            <%= input(@paper, 'first_name', label: 'First name') %>
           </div>
           <div class="large-6 columns">
-            <%= input('last_name', label: 'Last name') %>
+            <%= input(@paper, 'last_name', label: 'Last name') %>
           </div>
         </div>
         <div class="row">
           <div class="large-6 columns">
-            <%= input('email', label: 'Email', type: 'email', placeholder: '@') %>
+            <%= input(@paper, 'email', label: 'Email', type: 'email', placeholder: '@') %>
           </div>
           <div class="large-6 columns">
             <label>
-              <%= input('affiliated_university', label: 'Affiliated University') %>
+              <%= input(@paper, 'affiliated_university', label: 'Affiliated University') %>
           </div>
         </div>
         <div class="row">
           <fieldset>
             <p>Abstracts of 300 words, for papers of 20 minutes.</p>
-            <%= input('paper', label: 'Upload proposal', type: 'file', accept: 'application/*') %>
+            <%= input(@paper, 'paper', label: 'Upload proposal', type: 'file', accept: 'application/*') %>
           </fieldset>
         </div>
         <div class="row">

@@ -79,10 +79,6 @@ GEM
     mailgun-ruby (1.0.3)
       json (~> 1.8)
       rest-client (~> 1.6)
-    mailgun_rails (0.7.0)
-      actionmailer (>= 3.2.13)
-      json (>= 1.7.7)
-      rest-client (>= 1.6.7)
     mime-types (2.6.1)
     mini_portile (0.6.2)
     minitest (5.7.0)
@@ -167,7 +163,6 @@ DEPENDENCIES
   foundation-rails
   jquery-rails
   mailgun-ruby
-  mailgun_rails
   puma
   rails (= 4.2.1)
   rails_12factor
