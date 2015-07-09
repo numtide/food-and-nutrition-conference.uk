@@ -12,14 +12,7 @@ jQuery(function($) {
 </script>
 <% end %>
 
-<div class="row">
-  <div class="large-12 columns">
-    <div class="panel">
-      <h1>Coming soon</h1>
-    </div>
-  </div>
-</div>
-
+<% if Rails.env.development? %>
 <div class="row">
   <div class="large-12 columns">
     <form class="panel">
@@ -87,3 +80,12 @@ jQuery(function($) {
     </form>
   </div>
 </div>
+<% else %>
+<div class="row">
+  <div class="large-12 columns">
+    <div class="panel">
+      <h1>Coming soon</h1>
+    </div>
+  </div>
+</div>
+<% end %>

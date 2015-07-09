@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   scope path: '/call-for-paper', controller: :call_for_paper, as: :call_for_paper do
     get '/', action: 'index'
+    post '/', action: 'post'
   end
 
   get '/registration' => 'registration#index',  :as => :registration

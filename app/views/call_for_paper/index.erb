@@ -42,58 +42,42 @@ in one venue.
   </div>
 
   <div class="large-6 columns">
-    <form class="panel" data-equalizer-watch>
-      <div class="row">
-        <div class="large-12 columns">
-          <label>
-            Academic title
-            <input name="academic_title" type="text" placeholder="" />
-          </label>
+    <div class="panel" data-equalizer-watch>
+      <%= form_tag({action: 'post'}, multipart: true) do %>
+        <div class="row">
+          <div class="large-12 columns">
+            <%= input('academic_title', label: 'Academic title') %>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="large-6 columns">
-          <label>
-            First name
-            <input name="first_name" type="text" placeholder="" />
-          </label>
+        <div class="row">
+          <div class="large-6 columns">
+            <%= input('first_name', label: 'First name') %>
+          </div>
+          <div class="large-6 columns">
+            <%= input('last_name', label: 'Last name') %>
+          </div>
         </div>
-        <div class="large-6 columns">
-          <label>
-            Surname
-            <input name="surname" type="text" placeholder="" />
-          </label>
+        <div class="row">
+          <div class="large-6 columns">
+            <%= input('email', label: 'Email', type: 'email', placeholder: '@') %>
+          </div>
+          <div class="large-6 columns">
+            <label>
+              <%= input('affiliated_university', label: 'Affiliated University') %>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="large-6 columns">
-          <label>
-            Email
-            <input name="email" type="email" placeholder="@" />
-          </label>
+        <div class="row">
+          <fieldset>
+            <p>Abstracts of 300 words, for papers of 20 minutes.</p>
+            <%= input('paper', label: 'Upload proposal', type: 'file', accept: 'application/*') %>
+          </fieldset>
         </div>
-        <div class="large-6 columns">
-          <label>
-            Affiliated University
-            <input type="text" placeholder="" />
-          </label>
+        <div class="row">
+          <div class="large-12 columns">
+            <button type="submit" class="small radius button">Submit</button>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <fieldset>
-          <p>Abstracts of 300 words, for papers of 20 minutes.</p>
-          <label>
-            Upload proposal
-            <input name="paper" type="file" accept="application/*" value="Add document" />
-          </label>
-        </fieldset>
-      </div>
-      <div class="row">
-        <div class="large-12 columns">
-          <p>Decisions on the conference program will be made in September 2015.</p>
-          <button type="submit" class="small radius button">Submit</button>
-        </div>
-      </div>
-    </form>
+      <% end %>
+    </div>
   </div>
 </div>
