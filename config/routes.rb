@@ -10,6 +10,6 @@ Rails.application.routes.draw do
   get '/programme'    => 'programme#index',     :as => :programme
   get '/abstracts'    => 'abstracts#index',     :as => :abstracts
   get '/access'       => 'access#index',        :as => :access
-  get '/about'        => 'about#index',         :as => :about
+  get '/organization' => 'organization#index',  :as => :organization
   get '/contact'      => 'contact#index',       :as => :contact
 end
