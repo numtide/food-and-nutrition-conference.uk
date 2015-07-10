@@ -19,7 +19,7 @@ class CallForPaperMailer < ApplicationMailer
     mail(
       from: site_email,
       to: paper.contact_email,
-      subject: 'Thank you for your submission'
+      subject: 'Food and Nutrition Conference submission'
     )
   end
 
