@@ -90,11 +90,19 @@ body.programme {
   background-color: $orange-light;
 }
 
+.top-bar-section li.abstracts {
+  background-color: $blue-dark;
+}
+body.abstracts {
+  background-color: $blue-light;
+}
+
+
 .top-bar-section li.access {
-  background-color: $brown-dark;
+  background-color: $white-dark;
 }
 body.access {
-  background-color: $brown-light;
+  background-color: $white-light;
 
   #map {
     padding-bottom: 1.25rem;
@@ -108,12 +116,6 @@ body.access {
   }
 }
 
-.top-bar-section li.abstracts {
-  background-color: $blue-dark;
-}
-body.abstracts {
-  background-color: $blue-light;
-}
 
 .top-bar-section li.organization {
   background-color: $red-dark;
@@ -123,8 +125,8 @@ body.organization {
 }
 
 .top-bar-section li.contact {
-  background-color: $white-dark;
+  background-color: $brown-dark;
 }
 body.contact {
-  background-color: $white-light;
+  background-color: $brown-light;
 }
