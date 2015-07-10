@@ -15,5 +15,6 @@
 //= require foundation
 //= require turbolinks
 //= require stickyFooter
+//= require jquery.rwdImageMaps
 
 $(function(){ $(document).foundation(); });

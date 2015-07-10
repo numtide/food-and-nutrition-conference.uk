@@ -1,4 +1,8 @@
-
+<% content_for(:page_scripts) do %>
+<script>
+  $('img[usemap]').rwdImageMaps();
+</script>
+<% end %>
 <div class="row">
   <div class="large-5 columns">
     <h1><%= site_name %></h1>
@@ -19,7 +23,51 @@ in one venue.
   </div>
   <div class="large-7 columns">
     <br>
-    <%= image_tag "menu2.png", class: "piechart" %>
+    <map id="imgmap2015710192932" name="imgmap2015710192932">
+      <area
+        shape="poly"
+        coords="13,546,1,462,7,379,34,279,100,171,352,372,326,423,326,477"
+        alt="Call for Paper"
+        title="Call for Paper"
+        href="<%= call_for_paper_path %>" />
+      <area
+        shape="poly" coords="101,171,169,101,254,47,362,10,449,4,450,325,398,336,351,371"
+        alt="Registration"
+        title="Registration"
+        href="<%= registration_path %>" />
+      <area
+        shape="poly"
+        coords="451,4,564,18,660,56,738,110,798,171,548,373,509,340,450,324"
+        alt="Programme"
+        title="Programme"
+        href="<%= programme_path %>" />
+      <area
+        shape="poly"
+        coords="800,171,851,254,885,345,892,457,883,549,571,476,573,426,549,374"
+        alt="Abstracts"
+        title="Abstracts"
+        href="<%= abstracts_path %>" />
+      <area
+        shape="poly"
+        coords="885,551,839,666,786,741,727,799,642,852,504,561,548,528,571,475"
+        alt="Access"
+        title="Access"
+        href="<%= access_path %>" />
+      <area
+        shape="poly"
+        coords="643,853,519,891,446,895,340,883,256,852,396,560,449,575,504,563"
+        alt="Organization"
+        title="Organization"
+        href="<%= organization_path %>" />
+      <area
+        shape="poly"
+        coords="256,854,163,795,105,737,41,636,14,552,327,478,349,525,396,562"
+        alt="Contact"
+        title="Contact"
+        href="<%= contact_path %>" />
+    </map>
+
+    <%= image_tag "menu2.png", class: "piechart", usemap: '#imgmap2015710192932' %>
     <br>
     <br>
 
