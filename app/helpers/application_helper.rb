@@ -7,6 +7,10 @@ module ApplicationHelper
     "12-13 May 2016"
   end
 
+  def site_email
+    Rails.application.config.site_email
+  end
+
   def hide_email(address)
     address
       .to_s
