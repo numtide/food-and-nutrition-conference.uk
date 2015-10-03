@@ -15,11 +15,14 @@ module EmailValidation
 
   def email_validation
     response = MAILGUN_PUB.get('address/validate', address: email)
-    fail('Service error: ' + resp.inspect) unless response.code == 200
     r = response.to_h
     unless r['is_valid']
       reason = r['did_you_mean'] ? MSG % r['did_you_mean'] : MSG1
       errors.add(:email, reason)
     end
+  rescue Mailgun::CommunicationError => ex
+    # If there is an error with mailgun, assume the email is OK
+    Raven.capture_exception(ex)
+    true
   end
 end
