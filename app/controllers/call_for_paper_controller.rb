@@ -4,6 +4,7 @@ class CallForPaperController < ApplicationController
   end
 
   def post
+    raise NotImplementedError
     @paper = Paper.new(params[:paper])
     if @paper.valid?
       CallForPaperMailer.data_email(@paper).deliver_now

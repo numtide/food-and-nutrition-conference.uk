@@ -44,38 +44,39 @@ in one venue.
 
   <div class="large-6 columns">
     <div class="panel" data-equalizer-watch>
+      <h2>Submission is now closed</h2>
       <%= form_tag({action: 'post'}, multipart: true) do %>
         <div class="row">
           <div class="large-12 columns">
-            <%= input(@paper, 'academic_title', label: 'Academic title') %>
+            <%= input(@paper, 'academic_title', label: 'Academic title', disabled: true) %>
           </div>
         </div>
         <div class="row">
           <div class="large-6 columns">
-            <%= input(@paper, 'first_name', label: 'First name') %>
+            <%= input(@paper, 'first_name', label: 'First name', disabled: true) %>
           </div>
           <div class="large-6 columns">
-            <%= input(@paper, 'last_name', label: 'Last name') %>
+            <%= input(@paper, 'last_name', label: 'Last name', disabled: true) %>
           </div>
         </div>
         <div class="row">
           <div class="large-6 columns">
-            <%= input(@paper, 'email', label: 'Email', type: 'email', placeholder: '@') %>
+            <%= input(@paper, 'email', label: 'Email', type: 'email', placeholder: '@', disabled: true) %>
           </div>
           <div class="large-6 columns">
             <label>
-              <%= input(@paper, 'affiliated_university', label: 'Affiliated University') %>
+              <%= input(@paper, 'affiliated_university', label: 'Affiliated University', disabled: true) %>
           </div>
         </div>
         <div class="row">
           <fieldset>
             <p>Abstracts of 300 words, for papers of 20 minutes.</p>
-            <%= input(@paper, 'paper', label: 'Upload proposal', type: 'file', accept: 'application/*') %>
+            <%= input(@paper, 'paper', label: 'Upload proposal', type: 'file', accept: 'application/*', disabled: true) %>
           </fieldset>
         </div>
         <div class="row">
           <div class="large-12 columns">
-            <button type="submit" class="small radius button">Submit</button>
+            <button type="submit" class="small radius button" disabled>Submit</button>
           </div>
         </div>
       <% end %>
