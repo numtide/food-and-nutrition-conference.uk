@@ -8,4 +8,6 @@ Rails.application.instance_eval do
   end
 end
 
-MAILGUN_PUB = Mailgun::Client.new(ENV['MAILGUN_PUBLIC_KEY'] || fail)
+if ENV['MAILGUN_PUBLIC_KEY']
+  MAILGUN_PUB = Mailgun::Client.new(ENV['MAILGUN_PUBLIC_KEY'])
+end
