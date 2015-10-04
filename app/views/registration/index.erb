@@ -1,91 +1,119 @@
 <% content_for(:title) { "Registration" } %>
 <% content_for :page_scripts do %>
+<script src="https://checkout.stripe.com/checkout.js"></script>
 <script>
 jQuery(function($) {
   function updateTotal() {
-    $("#total").text($('#dinner').val());
+    var dinner = $('#dinner').val();
+    var total = 0;
+    if (dinner == 'yes_non_speaker') {
+      $("#payment").show()
+      total = 35
+    } else {
+      $("#payment").hide()
+    }
+    $("#total").text(total + '.-');
   }
-
   $("#dinner").change(updateTotal);
   updateTotal();
+
+  function updatePayment() {
+    if ($("#stripe_token").val()) {
+      $("#setup_payment").text("Payment setup ✓")
+    } else {
+      $("#setup_payment").text("Setup payment")
+    }
+  }
+  updatePayment();
+  var handler = StripeCheckout.configure({
+    key: "<%= ENV['STRIPE_PUBLIC_KEY'] %>",
+    image: "<%= asset_path('menu2_small.png') %>",
+    locale: 'auto',
+    token: function(token) {
+      $("#stripe_token").val(token.id);
+      updatePayment();
+    }
+  });
+
+  $('#setup_payment').on('click', function(e) {
+    // Open Checkout with further options
+    handler.open({
+      name: 'Food and Nutrition in 19c & 20c Europe',
+      description: 'Restauration',
+      currency: "gbp",
+      email: $("input[type=email]").val(),
+      amount: 3500,
+      allowRememberMe: false,
+    });
+    e.preventDefault();
+    e.stopPropagation();
+  });
+
+  // Close Checkout on page navigation
+  $(window).on('popstate', function() {
+    handler.close();
+  });
 });
 </script>
 <% end %>
 
-<% if Rails.env.development? %>
-<div class="row">
-  <div class="large-12 columns">
-    <form class="panel">
-      <div class="row">
-        <div class="large-4 columns">
-          <label>
-            Academic title
-            <input name="academic_title" type="text" placeholder="" />
-          </label>
-        </div>
-        <div class="large-4 columns">
-          <label>
-            Firsts name
-            <input name="first_name" type="text" placeholder="">
-          </label>
-        </div>
-        <div class="large-4 columns">
-          <label>
-            Surname
-            <input id="surname" name="surname" type="text" placeholder="">
-          </label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="large-4 columns">
-          <label>
-            Email
-            <input id="email" name="email" type="email" placeholder="@">
-          </label>
-        </div>
-        <div class="large-4 columns left">
-          <label>
-            Affiliated University
-            <input id="university" name="university" type="text">
-          </label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="large-4 columns">
-          <label>
-            Will you be joining us for the conference dinner?
-            <select id="dinner" name="dinner">
-              <option value="0.-">Yes - speaker - Free</option>
-              <option value="20.-">Yes - non-speaker - 20.- GBP</option>
-              <option value="0.-">No</option>
-            </select>
-          </label>
-        </div>
-
-        <div class="large-4 columns"></div>
-
-        <div class="large-4 columns"></div>
-
-      </div>
-      <div class="row">
-        <div class="large-4 columns">
-          <h4>Total: <span id="total">0</span> GBP</h4>
-        </div>
-      </div>
-      <div class="row">
-        <div class="large-12 columns">
-          <button type="submit" class="small radius button">Submit</button>
-        </div>
-      <div>
-    </form>
-  </div>
-</div>
-<% else %>
 <div class="row">
   <div class="large-12 columns">
     <div class="panel">
-      <h1>Coming soon</h1>
+      <p>This is the registration for the conference. 12-13 May 2016</p>
+      <%= form_tag({action: 'post'}, multipart: true, id: 'registration_form') do %>
+        <div class="row">
+          <div class="large-12 columns">
+            <%= input(@model, 'academic_title', label: 'Academic title') %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-6 columns">
+            <%= input(@model, 'first_name', label: 'First name') %>
+          </div>
+          <div class="large-6 columns">
+            <%= input(@model, 'last_name', label: 'Last name') %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-6 columns">
+            <%= input(@model, 'email', label: 'Email', type: 'email', placeholder: '@') %>
+          </div>
+          <div class="large-6 columns">
+            <%= input(@model, 'affiliated_university', label: 'Affiliated University') %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-6 columns">
+            <label>
+              Will you be joining us for the conference dinner?
+              <select id="dinner" name="registration[dinner]">
+                <option value="yes_speaker"<%= " selected" if @model.dinner == 'yes_speaker' %>>Yes - speaker - Free</option>
+                <option value="yes_non_speaker"<%= " selected" if @model.dinner == 'yes_non_speaker' %>>Yes - non-speaker - 35.- GBP</option>
+                <option value="no"<%= " selected" if @model.dinner == 'no' %>>No</option>
+              </select>
+            </label>
+          </div>
+          <div class="large-6 columns">
+            <%= input(@model, 'dietary_requirements', label: 'Dietary requirements') %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-6 columns">
+            <h4>Total: <span id="total">0.-</span> GBP</h4>
+          </div>
+          <div class="large-6 columns" id="payment">
+            <button type="submit" class="small radius button" id="setup_payment">Setup payment</button>
+            <%= input(@model, 'stripe_token', label: '', type: 'hidden', id: 'stripe_token') %>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="large-12 columns">
+            <button type="submit" class="small radius button">Submit</button>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
-<% end %>

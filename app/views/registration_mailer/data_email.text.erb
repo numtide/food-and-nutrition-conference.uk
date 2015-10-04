@@ -1,0 +1,14 @@
+Academic title: <%= @model.academic_title %>
+First name: <%= @model.first_name %>
+Last name: <%= @model.last_name %>
+Email address: <%= @model.email %>
+Affiliated university: <%= @model.affiliated_university %>
+
+Attending to dinner: <%= @model.dinner %>
+Dietary requirements: <%= @model.dietary_requirements %>
+
+--- Technical details below ---
+
+Payment token: <%= @model.stripe_token %>
+Payment details:
+<%= @model.charge.inspect %>

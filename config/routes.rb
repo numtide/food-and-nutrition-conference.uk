@@ -6,7 +6,11 @@ Rails.application.routes.draw do
     post '/', action: 'post'
   end
 
-  get '/registration' => 'registration#index',  :as => :registration
+  scope path: '/registration', controller: :registration, as: :registration do
+    get '/', action: 'index'
+    post '/', action: 'post'
+  end
+
   get '/programme'    => 'programme#index',     :as => :programme
   get '/abstracts'    => 'abstracts#index',     :as => :abstracts
   get '/access'       => 'access#index',        :as => :access
