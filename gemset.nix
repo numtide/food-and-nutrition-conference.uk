@@ -523,6 +523,17 @@
       "sprockets"
     ];
   };
+  "stripe" = {
+    version = "1.27.2";
+    source = {
+      type = "gem";
+      sha256 = "0qjq7jzc0q9zc6bx5zhbj2pkv9lpxpzsdqjmjfifcv9a79llfb9a";
+    };
+    dependencies = [
+      "json"
+      "rest-client"
+    ];
+  };
   "thor" = {
     version = "0.19.1";
     source = {
