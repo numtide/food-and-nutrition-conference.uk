@@ -20,7 +20,22 @@ module ApplicationHelper
       .join
   end
 
-  def input(model, name, label:, type: 'text', **kwargs)
+  def hidden_input(model, name, **kwargs)
+    attributes = {
+      name: "%s[%s]" % [model.class.model_name.param_key, name],
+      type: 'hidden',
+      value: model.public_send(name),
+    }
+      .merge(kwargs)
+      .map{ |(k, v)| "#{k}=\"#{h v.to_s}\"" }
+      .join(' ')
+
+    <<-HTML.strip_heredoc.html_safe
+      <input #{attributes}>
+    HTML
+  end
+
+  def input(model, name, label: '', type: 'text', **kwargs)
     errors = model.errors[name]
     if errors.any?
       error = "<small class=\"error\">#{errors.join(' ')}</small>"
