@@ -57,7 +57,7 @@ class Registration
   end
 
   def make_payment!
-    return unless is_paying?
+    return true unless is_paying?
 
     # Create the charge on Stripe's servers - this will charge the user's card
     @charge = Stripe::Charge.create(
