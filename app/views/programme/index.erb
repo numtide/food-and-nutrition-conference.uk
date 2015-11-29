@@ -1,51 +1,128 @@
 <% content_for(:title) { "Programme" } %>
 
-<% if Rails.env.development? %>
 <div class="row">
   <div class="large-12 columns">
     <div class="panel">
-      <p>This is a single track program.</p>
+      <div class="clearfix">
+        <div class="hide-for-print right">
+          <a href="/<%= URI.encode("Food&Nutrition Conference Provisional Program.pdf") %>" class="small radius button">
+              <i class="fi-download"></i>
+              Download PDF
+          </a>
+
+          <a href="javascript:window.print()" class="small radius button">
+            <i class="fi-print"></i>
+            Print this page
+          </a>
+        </div>
+      </div>
+
       <div class="row">
-        <div class="large-6 medium-6 columns">
-          <h3>Thursday 12 May</h3>
+        <div class="small-12 large-4 columns">
+          <h3 class="text-center">Thursday 12 May<br>Afternoon</h3>
+          <h4 class="text-center">Session 1: Food and Nutrition<br><br></h4>
           <dl class="panel callout">
-            <dt>1pm
-            <dd>Welcome - Tea and Coffee
-            <dt>2pm
-            <dd>Food &amp; nutrition - presented by Lorem Ipsum
-            <dt>3pm
-            <dd>Food &amp; nutrition - presented by Lorem Ipsum
-            <dt>5pm
+            <dt>14:00
+            <dd>Welcome and registration
+            <dt>14:30 - 16:00
+            <dd>
+              <h5>Panel 1: Nutrition, Diet and Health</h5>
+
+              <p>Peter Scholliers, Vrije Universiteit Brussel, Belgium<br>
+              <em>Feeding the Children in the Brussels Hospitals in the 19th Century</em>
+
+              <p>Eric Schneider, London School of Economic, UK<br>
+              <em>The influence of Feeding and Nutrition on Morbidity, Mortality and Growth Outcomes in Childhood and Adolescence: Evidence from the London Founding Hospital, 1893-1919</em>
+
+              <p>Josep Barona, Universitat de Valencia, Spain<br>
+              <em>Nutrition and Resistance to Infection: Medical and Political Responses in Interwar Years</em>
+
+            <dt>16:00 - 16:30
+            <dd>Coffee Break
+            <dt>16:30 - 17:30
+            <dd>
+              <h5>Panel 2: Nutrition and Food Availability</h5>
+
+              <p>Bernard Harris, University of Strathclyde, UK<br>
+              <em>Re-Estimating the Availability of Food in the 18th and 19th Centuries</em>
+
+              <p>Dipak K. Sarker, University of Brighton, UK<br>
+              <em>The Use of Food Processing in the 19th and 20th Centuries and its Nutritional Consequences</em>
+            <hr>
+            <dt>19:30
+            <dd>Dinner at Brighton
           </dl>
         </div>
-        <div class="large-6 medium-6 columns">
-          <h3>Friday 13 May</h3>
+
+
+        <div class="small-12 large-4 columns">
+          <h3 class="text-center">Friday 13 May<br>Morning</h3>
+          <h4 class="text-center">Session 2: Household Consumption and Standards of Living</h3>
           <dl class="panel callout">
-            <dt>10am
-            <dd>Food &amp; nutrition - presented by Lorem Ipsum
-            <dt>11am
-            <dd>Food &amp; nutrition - presented by Lorem Ipsum
-            <hr>
-            <dt>1pm
-            <dd>Food &amp; nutrition - presented by Lorem Ipsum
-            <dt>2pm
-            <dd>Food &amp; nutrition - presented by Lorem Ipsum
-            <dt>3pm
-            <dd>Food &amp; nutrition - presented by Lorem Ipsum
-            <dt>5pm
-            <dd>Collation and drinks
+            <dt>9:30
+            <dd>Coffee and welcome
+            <dt>10:00 - 11:00
+            <dd>
+              <h5>Panel 1</h5>
+
+              <p>Martin Bruegel, Institut National de la Recherche Agronomique, France<br>
+              <em>A Tale of Two Families in Fin-de-Siècle Paris</em>
+
+              <p>Stefan Öberg, University of Gothenburg, Sweden<br>
+              <em>Do the Poor Pay More? A Study of the Price of Food Consumed by Household with Different Incomes in Early Century Sweden</em>
+            <dt>11:00 - 11:30
+            <dd>Coffee Break
+            <dt>11:30 - 12:30
+            <dd>
+              <h5>Panel 2</h5>
+
+              <p>Ian Gazeley, University of Sussex, UK<br>
+              <em>Nutrition in Western Europe and the USA before the First World War</em>
+
+              <p>Maja Godina Golija, ZRC SAZU and University of Maribor, Slovenia<br>
+              <em>Food Expenditure and Nutrition in Slovenia 1920-1945</em>
+            <dt>12:30 - 13:30
+            <dd>Lunch
+          </dl>
+        </div>
+
+
+        <div class="small-12 large-4 columns">
+          <h3 class="text-center">Friday 13 May<br>Afternoon</h3>
+          <h4 class="text-center">Session 3: Food Policy<br><br><br></h3>
+          <dl class="panel callout">
+            <dt>13:30 - 15:00
+            <dd>
+              <h5>Panel 1: Governmental Measures in Time of Crisis</h5>
+
+              <p>John Martin, De Montfort University, UK<br>
+              <em>Better Fed: The Impact of the State Directed Production and Rationing System in Britain during the Second World War</em>
+
+              <p>Ingrid de Zwarte, University of Amsterdam, NL<br>
+              <em>Famine and Nutrition: The Dutch Hunger Winter 1944-1945</em>
+
+              <p>Silvia Inaudi, University of Turin, Italy<br>
+              <em>Feeding the Children: Nutrition, Health and Welfare in Italy in the Long Aftermath of World War II</em>
+            <dt>15:00 - 15:30
+            <dd>Coffee Break
+            <dt>15:30 - 17:00
+            <dd>
+              <h5>Panel 2: Food Policy: Consequences and Difficulties</h5>
+
+              <p>Fernando Collantes, University of Zaragoza, Spain<br>
+              <em>Why is the Nutritional Transition so Slow in Mediterranean Europe? Insight from the Consumption of Dairy Product in Spain (1950-1965)</em>
+
+              <p>Emile Aguirre, UCLA School of Law, US<br>
+              <em>Unintended Consequences for Health of Fifty Years of the Common Agricultural Policy</em>
+
+              <p>Isabel Fletcher, University of Edinburgh, UK<br>
+              <em>How Much Meat Should We Eat: Understanding the Complexities of Developing Sustainable Healthy Eating Advice</em>
+
+            <dt>17:00 - 17:30
+            <dd>Conference closing discussion
           </dl>
         </div>
       </div>
     </div>
   </div>
 </div>
-<% else %>
-<div class="row">
-  <div class="large-12 columns">
-    <div class="panel">
-      <h1>Coming soon</h1>
-    </div>
-  </div>
-</div>
-<% end %>
