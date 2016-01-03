@@ -3,7 +3,20 @@
 <div class="row">
   <div class="large-12 columns">
     <div class="panel">
-      <h1>Coming soon</h1>
+      <dl>
+<%
+Dir.glob(Rails.root + 'public/abstracts/*.pdf').each do |file|
+  filename = File.basename(file, '.pdf')
+  name, paper = filename.split('-', 2)
+  size = File.size(file)
+
+%>
+        <dt><%= name %></dt>
+        <dd>
+          <em><%= paper %></em>
+          <a href="/abstracts/<%= URI.escape(filename) %>.pdf">PDF (<%= number_to_human_size(size) %>)</a></dd>
+<% end %>
+      </dl>
     </div>
   </div>
 </div>
