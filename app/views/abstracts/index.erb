@@ -14,7 +14,7 @@ Dir.glob(Rails.root + 'public/abstracts/*.pdf').sort.each do |file|
         <dt><%= name %></dt>
         <dd>
           <em><%= paper %></em>
-          <a href="/abstracts/<%= URI.escape(filename) %>.pdf">PDF (<%= number_to_human_size(size) %>)</a></dd>
+          <a href="/abstracts/<%= URI.escape(filename) %>.pdf" target="_blank">PDF (<%= number_to_human_size(size) %>)</a></dd>
 <% end %>
       </dl>
     </div>
