@@ -26,6 +26,10 @@ stdenv.mkDerivation rec {
     bundle exec rake --trace assets:precompile RAILS_ENV=production
   '';
 
+  dontStrip = true;
+  dontPatchELF = true;
+  dontGzipMan = true;
+
   installPhase = ''
     cp -r . $out
   '';
