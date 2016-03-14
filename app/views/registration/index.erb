@@ -88,8 +88,8 @@ jQuery(function($) {
             <label>
               Will you be joining us for the conference dinner?
               <select id="dinner" name="registration[dinner]">
-                <option value="yes_non_speaker"<%= " selected" if @model.dinner == 'yes_non_speaker' %>>Yes - 35.- GBP</option>
                 <option value="no"<%= " selected" if @model.dinner == 'no' %>>No</option>
+                <option value="yes_non_speaker"<%= " selected" if @model.dinner == 'yes_non_speaker' %>>Yes - 35.- GBP</option>
               </select>
             </label>
           </div>
