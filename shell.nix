@@ -9,7 +9,6 @@ stdenv.mkDerivation rec {
   env = package.env;
   buildInputs = package.buildInputs;
   shellHook = ''
-    export HOME=$PWD
     export GEM_HOME=${env}/${env.ruby.gemPath}
     export PATH=${env}/${env.ruby.gemPath}/bin:${env.bundler}/bin:$PATH
   '';
