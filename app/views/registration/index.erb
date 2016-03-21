@@ -4,7 +4,7 @@
 <script>
 jQuery(function($) {
   function updateTotal() {
-    var dinner = $('#dinner').val();
+    var dinner = $('input.dinner:checked').val();
     var total = 0;
     if (dinner == 'yes_non_speaker') {
       $("#payment").show()
@@ -14,7 +14,7 @@ jQuery(function($) {
     }
     $("#total").text(total + '.-');
   }
-  $("#dinner").change(updateTotal);
+  $("input.dinner").change(updateTotal);
   updateTotal();
 
   function updatePayment() {
@@ -85,13 +85,8 @@ jQuery(function($) {
         </div>
         <div class="row">
           <div class="large-6 columns">
-            <label>
-              Will you be joining us for the conference dinner?
-              <select id="dinner" name="registration[dinner]">
-                <option value="no"<%= " selected" if @model.dinner == 'no' %>>No</option>
-                <option value="yes_non_speaker"<%= " selected" if @model.dinner == 'yes_non_speaker' %>>Yes - 35.- GBP</option>
-              </select>
-            </label>
+            <p>Will you be joining us for the conference dinner?</p>
+            <%= checkboxes(@model, 'dinner', 'no' => 'No', 'yes_non_speaker' => 'Yes - 35.- GBP') %>
           </div>
           <div class="large-6 columns">
             <%= input(@model, 'dietary_requirements', label: 'Dietary requirements') %>

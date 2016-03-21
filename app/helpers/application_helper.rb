@@ -62,4 +62,32 @@ module ApplicationHelper
       #{error}
     HTML
   end
+
+  def checkboxes(model, name, kv = {})
+    errors = model.errors[name]
+    if errors.any?
+      error = "<small class=\"error\">#{errors.join(' ')}</small>"
+      error_class = ' class="error"'
+    else
+      error = ''
+      error_class = ''
+    end
+
+    input_name = "%s[%s]" % [model.class.model_name.param_key, name]
+
+    checkboxes = kv.map do |(k,desc)|
+      checked = model.public_send(name) == k ? ' checked' : ''
+      <<-CHECKBOX.strip_heredoc
+        <label>
+          <input type="radio" name="#{h input_name}" class="#{h name}" value="#{h k}"#{checked}>
+          #{desc}
+        </label>
+      CHECKBOX
+    end
+
+    <<-HTML.strip_heredoc.html_safe
+      #{checkboxes.join("\n")}
+      #{error}
+    HTML
+  end
 end
