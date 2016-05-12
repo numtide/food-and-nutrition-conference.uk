@@ -1,6 +1,7 @@
 class RegistrationController < ApplicationController
   def index
     @model = Registration.new
+    render :closed
   end
 
   def post
