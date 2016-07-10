@@ -13,7 +13,7 @@ stdenv.mkDerivation rec {
 
   src = ./.;
 
-  buildInputs = [ env.ruby env.bundler nodejs tzdata ];
+  buildInputs = [ env env.ruby env.bundler nodejs tzdata ];
 
   configurePhase = ''
     export HOME=$PWD
