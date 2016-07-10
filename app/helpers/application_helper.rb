@@ -90,4 +90,12 @@ module ApplicationHelper
       #{error}
     HTML
   end
+
+  def slides(name)
+    path = "/slides/" + URI.escape(name)
+    size = number_to_human_size File.size(Rails.root.join("public", "slides", name))
+    <<-HTML.strip_heredoc.html_safe
+      <a href="#{path}" target="_blank">Download slides (PPT: #{size})</a>
+    HTML
+  end
 end
