@@ -1,10 +1,10 @@
-{ stdenv, bundlerEnv, ruby_2_2, nodejs, openssl, tzdata }:
+{ stdenv, bundlerEnv, ruby_2_4, nodejs, openssl, tzdata }:
 stdenv.mkDerivation rec {
   name = "food-and-nutrition-conference";
 
   env = bundlerEnv {
     name = "food-and-nutrition-conference-gems";
-    ruby = ruby_2_2;
+    ruby = ruby_2_4;
     gemfile = ./Gemfile;
     lockfile = ./Gemfile.lock;
     gemset = ./gemset.nix;

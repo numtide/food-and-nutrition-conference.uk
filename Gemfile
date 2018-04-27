@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ## Frameworks ##
 
 # Good ol' RoR
-gem 'rails', '4.2.5'
+gem 'rails', '~> 4.2.5'
 
 # Logs on stdout and serve static assets
 gem 'rails_12factor'
